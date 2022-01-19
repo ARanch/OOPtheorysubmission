@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    [SerializeField] private GameObject ball;
+    [SerializeField] private GameObject cube;
     // Start is called before the first frame update
     void Start()
     {
