@@ -6,28 +6,28 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public static string itemType = "Cube";
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Awake()
     {
-        if (Instance != null)
-        { 
-	        Destroy(gameObject);
-            return;
-	    }
+        // if (Instance != null)
+        // { 
+	    //     Destroy(gameObject);
+        //     return;
+	    // }
 
-        Instance = this;
+        // Instance = this;
         DontDestroyOnLoad(gameObject); // don't destroy when scene changes
     }
 
     public void SelectCube() 
     {
-        itemType = "Cube";
         Debug.Log("Cube currently selected");
+        itemType = "Cube";
     }
 
     public void SelectBall() 
     { 
-	    itemType = "Ball";
         Debug.Log("Ball currently selected");
+	    itemType = "Ball";
     }
 }
