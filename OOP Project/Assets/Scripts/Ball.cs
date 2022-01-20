@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : Item
+public class Ball : Item // example of inheritance
 {
     void Awake()
     {
-        Vector3 objectScale = transform.localScale;
-        scale = Scaling(1.5f);
-        transform.localScale = new Vector3(objectScale.x * scale.x, objectScale.y * scale.y, objectScale.z*scale.z);
+        ChangeScale(); // example of abstraction
+    }
+    public override Vector3 GetScaling() // example of polymorhism
+    {
+        return base.GetScaling() * 3f; 
     }
 }
