@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public static string itemType = "Cube";
+    public static GameManager Instance; 
+    public static string itemType { get; private set;} // encapsulation example – itemtype can be set in this class, but can only be get in other classes.
    // Start is called before the first frame update
     void Awake()
     {
@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 	    //     Destroy(gameObject);
         //     return;
 	    // }
-
+        itemType = "Cube"; // default item
         // Instance = this;
         DontDestroyOnLoad(gameObject); // don't destroy when scene changes
     }
